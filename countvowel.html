@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>We checking for vowels, niqqa</title>
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<body>
+<button onclick="countVowel()"></button>
+</body>
+<script type="text/javascript">
+		var vSum;
+		var aSum = 0;
+		var eSum = 0;
+		var iSum = 0;
+		var oSum = 0;
+		var uSum = 0;
+	function countVowel()
+	{
+		var string = prompt("Please enter in a word or phrase: ", "");
+		for(var i = 0; i < string.length(); i++)
+		{
+			if(string.substring(i,i) == "a")
+			{
+				vSum++;
+				aSum++;
+			}
+
+			else if(string.substring(i,i) == "e")
+			{
+				vSum++;
+				eSum++;
+			}
+
+			else if(string.substring(i,i) == "i")
+			{
+				vSum++;
+				iSum++;
+			}
+
+			else if(string.substring(i,i) == "o")
+			{
+				vSum++;
+				oSum++;
+			}
+
+			else if(string.substring(i,i) == "u")
+			{
+				vSum++;
+				uSum++;
+			}
+			displayVowelCount();
+
+	}
+
+	function displayVowelCount()
+	{
+		var answer = prompt("Would you like to display the results of the vowel count?", "");
+		if(answer == "yes" || answer == "Yes" || answer == "y")
+		{
+			alert("Sum of all vowels: " + vSum + "\nSum of all A's: " + aSum + "\nSum of all E's: " + eSum + "\nSum of all I's: " + iSum + "\nSum of all O's: " + oSum + "\nSum of all U's: " + uSum);
+		}
+	}
+</script>
+</html>
